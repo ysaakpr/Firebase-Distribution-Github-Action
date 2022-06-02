@@ -9,5 +9,7 @@ RUN yarn global add firebase-tools \
 
 RUN chmod +x /app/entrypoint.sh
 
+RUN git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
 ENTRYPOINT [ "/app/entrypoint.sh" ]
 
