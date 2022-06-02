@@ -3,6 +3,8 @@
 RELEASE_NOTES=""
 RELEASE_NOTES_FILE=""
 
+git config --global --add safe.directory "*"
+
 if [[ -z ${INPUT_RELEASENOTES} ]]; then
         RELEASE_NOTES="$(git log -1 --pretty=short)"
 else
